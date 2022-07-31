@@ -1,4 +1,4 @@
-# Make Burger (make-burger)
+# FOOD Burger (food-burger)
 
 
 Projeto criado para finalização do curso de Vue.js 3 do Matheus Battisti.
