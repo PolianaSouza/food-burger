@@ -1,8 +1,8 @@
 {
-  "name": "make-burger",
+  "name": "food-burger",
   "version": "0.0.1",
   "description": "Projeto para finalização do curso do Matheus Batisti",
-  "productName": "Make Burger",
+  "productName": "FOOD Burger",
   "author": "PolianaSouza <polysantos88@gmail.com>",
   "private": true,
   "scripts": {
