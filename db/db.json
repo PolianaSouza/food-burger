@@ -1,83 +1,387 @@
 {
-    "ingredientes" : {
-      "paes" : [
-        {
-          "id" : 1 ,
-          "tipo" : " Italiano Branco "
-        },
-        {
-          "id" : 2 ,
-          "tipo" : " 3 Queijos "
-        },
-        {
-          "id" : 3 ,
-          "tipo" : " Parmesão e Orégano "
-        },
-        {
-          "id" : 4 ,
-          "tipo" : " Integral "
-        }
-      ],
-      "carnes" : [
-        {
-          "id" : 1 ,
-          "tipo" : " Maminha "
-        },
-        {
-          "id" : 2 ,
-          "tipo" : " Alcatra "
-        },
-        {
-          "id" : 3 ,
-          "tipo" : " Picanha "
-        },
-        {
-          "id" : 4 ,
-          "tipo" : " Hambúrguer vegetariano "
-        }
-      ],
-      "opcionais" : [
-        {
-          "id" : 1 ,
-          "tipo" : " Bacon "
-        },
-        {
-          "id" : 2 ,
-          "tipo" : " Cheddar "
-        },
-        {
-          "id" : 3 ,
-          "tipo" : " Salame "
-        },
-        {
-          "id" : 4 ,
-          "tipo" : " Tomate "
-        },
-        {
-          "id" : 4 ,
-          "tipo" : " Cebola roxa "
-        },
-        {
-          "id" : 4 ,
-          "tipo" : " Pepino "
-        }
-      ]
-    },
-    "estado" : [
+  "ingredientes": {
+    "paes": [
       {
-        "id" : 1 ,
-        "tipo" : " Solicitado "
+        "id": 1,
+        "tipo": " Italiano Branco "
       },
       {
-        "id" : 2 ,
-        "tipo" : " Em produção "
+        "id": 2,
+        "tipo": " 3 Queijos "
       },
       {
-        "id" : 3 ,
-        "tipo" : " Finalizado "
+        "id": 3,
+        "tipo": " Parmesão e Orégano "
+      },
+      {
+        "id": 4,
+        "tipo": " Integral "
       }
     ],
-    "hambúrgueres" : [
-      
+    "carnes": [
+      {
+        "id": 1,
+        "tipo": " Maminha "
+      },
+      {
+        "id": 2,
+        "tipo": " Alcatra "
+      },
+      {
+        "id": 3,
+        "tipo": " Picanha "
+      },
+      {
+        "id": 4,
+        "tipo": " Hambúrguer vegetariano "
+      }
+    ],
+    "opcionais": [
+      {
+        "id": 1,
+        "tipo": " Bacon "
+      },
+      {
+        "id": 2,
+        "tipo": " Cheddar "
+      },
+      {
+        "id": 3,
+        "tipo": " Salame "
+      },
+      {
+        "id": 4,
+        "tipo": " Tomate "
+      },
+      {
+        "id": 4,
+        "tipo": " Cebola roxa "
+      },
+      {
+        "id": 4,
+        "tipo": " Pepino "
+      },
+      {
+        "id": 5,
+        "tipo": " Azeitona "
+      },
+      {
+        "id": 6,
+        "tipo": " Alho "
+      }
     ]
-  }
+  },
+  "estado": [
+    {
+      "id": 1,
+      "tipo": " Solicitado "
+    },
+    {
+      "id": 2,
+      "tipo": " Em produção "
+    },
+    {
+      "id": 3,
+      "tipo": " Finalizado "
+    }
+  ],
+  "hamburgueres": [
+    {
+      "name": "Poly",
+      "bread": " Italiano Branco ",
+      "meat": " Maminha ",
+      "optional": [
+        " Cheddar ",
+        " Cebola roxa ",
+        " Pepino "
+      ],
+      "id": 1
+    },
+    {
+      "name": "José",
+      "bread": " 3 Queijos ",
+      "meat": " Picanha ",
+      "optional": [
+        " Cheddar ",
+        " Pepino ",
+        " Azeitona ",
+        " Salame "
+      ],
+      "id": 2
+    },
+    {
+      "name": "dea",
+      "bread": " Italiano Branco ",
+      "meat": " Hambúrguer vegetariano ",
+      "optional": [
+        " Pepino ",
+        " Azeitona ",
+        " Tomate "
+      ],
+      "id": 3
+    },
+    {
+      "name": "Poliana",
+      "bread": " Parmesão e Orégano ",
+      "meat": " Alcatra ",
+      "optional": [
+        " Cheddar ",
+        " Azeitona ",
+        " Tomate "
+      ],
+      "id": 4
+    },
+    {
+      "name": "Tony",
+      "bread": " 3 Queijos ",
+      "meat": " Maminha ",
+      "optional": [
+        " Cheddar ",
+        " Salame ",
+        " Pepino ",
+        " Tomate ",
+        " Azeitona "
+      ],
+      "id": 5
+    },
+    {
+      "name": "Salomão",
+      "bread": " 3 Queijos ",
+      "meat": " Alcatra ",
+      "optional": [
+        " Pepino ",
+        " Cheddar "
+      ],
+      "id": 6
+    },
+    {
+      "name": "Dai",
+      "bread": " Integral ",
+      "meat": " Hambúrguer vegetariano ",
+      "optional": [
+        " Azeitona ",
+        " Tomate ",
+        " Pepino "
+      ],
+      "id": 7
+    },
+    {
+      "name": "Gol",
+      "bread": " 3 Queijos ",
+      "meat": " Picanha ",
+      "optional": [
+        " Bacon ",
+        " Pepino ",
+        " Salame ",
+        " Tomate ",
+        " Azeitona ",
+        " Cheddar "
+      ],
+      "id": 8
+    },
+    {
+      "name": "sasa",
+      "bread": " 3 Queijos ",
+      "meat": " Maminha ",
+      "optional": [
+        " Cheddar "
+      ],
+      "id": 9
+    },
+    {
+      "name": "asa",
+      "bread": " 3 Queijos ",
+      "meat": " Alcatra ",
+      "optional": [
+        " Cebola roxa ",
+        " Azeitona "
+      ],
+      "id": 10
+    },
+    {
+      "name": "asa",
+      "bread": " 3 Queijos ",
+      "meat": " Alcatra ",
+      "optional": [
+        " Cebola roxa ",
+        " Azeitona "
+      ],
+      "id": 11
+    },
+    {
+      "name": "Dico",
+      "bread": " Italiano Branco ",
+      "meat": " Alcatra ",
+      "optional": [
+        " Cheddar ",
+        " Salame "
+      ],
+      "id": 12
+    },
+    {
+      "name": "Beto",
+      "bread": " 3 Queijos ",
+      "meat": " Alcatra ",
+      "optional": [
+        " Cheddar ",
+        " Bacon ",
+        " Cebola roxa ",
+        " Pepino "
+      ],
+      "id": 13
+    },
+    {
+      "name": "Ely",
+      "bread": " Parmesão e Orégano ",
+      "meat": " Maminha ",
+      "optional": [
+        " Pepino ",
+        " Cheddar ",
+        " Salame "
+      ],
+      "id": 14
+    },
+    {
+      "name": "sasas",
+      "bread": " Italiano Branco ",
+      "meat": " Hambúrguer vegetariano ",
+      "optional": [
+        " Cheddar ",
+        " Pepino "
+      ],
+      "id": 15
+    },
+    {
+      "name": "asa",
+      "bread": " 3 Queijos ",
+      "meat": " Alcatra ",
+      "optional": [
+        " Salame "
+      ],
+      "id": 16
+    },
+    {
+      "name": "saasa",
+      "bread": " Italiano Branco ",
+      "meat": " Alcatra ",
+      "optional": [
+        " Cheddar ",
+        " Pepino "
+      ],
+      "id": 17
+    },
+    {
+      "name": "asas",
+      "bread": " Italiano Branco ",
+      "meat": " Maminha ",
+      "optional": [
+        " Cheddar ",
+        " Pepino "
+      ],
+      "id": 18
+    },
+    {
+      "name": "aa",
+      "bread": " Italiano Branco ",
+      "meat": " Maminha ",
+      "optional": [
+        " Bacon ",
+        " Cheddar "
+      ],
+      "id": 19
+    },
+    {
+      "name": "sa",
+      "bread": " Italiano Branco ",
+      "meat": " Maminha ",
+      "optional": [
+        " Bacon ",
+        " Cheddar "
+      ],
+      "id": 20
+    },
+    {
+      "name": "asas",
+      "bread": " Italiano Branco ",
+      "meat": " Picanha ",
+      "optional": [
+        " Salame ",
+        " Azeitona "
+      ],
+      "id": 21
+    },
+    {
+      "name": "as",
+      "bread": " Integral ",
+      "meat": " Hambúrguer vegetariano ",
+      "optional": [
+        " Pepino ",
+        " Tomate "
+      ],
+      "id": 22
+    },
+    {
+      "name": "José Antônio",
+      "bread": " Parmesão e Orégano ",
+      "meat": " Alcatra ",
+      "optional": [
+        " Cheddar ",
+        " Pepino ",
+        " Salame ",
+        " Cebola roxa ",
+        " Tomate "
+      ],
+      "id": 23
+    },
+    {
+      "name": "sasa",
+      "bread": " 3 Queijos ",
+      "meat": " Alcatra ",
+      "optional": [
+        " Cheddar ",
+        " Pepino "
+      ],
+      "id": 24
+    },
+    {
+      "name": "final",
+      "bread": " Italiano Branco ",
+      "meat": " Alcatra ",
+      "optional": [
+        " Salame ",
+        " Azeitona ",
+        " Alho ",
+        " Tomate "
+      ],
+      "id": 25
+    },
+    {
+      "name": "Dea Silva",
+      "bread": " Parmesão e Orégano ",
+      "meat": " Maminha ",
+      "optional": [
+        " Salame ",
+        " Tomate ",
+        " Alho ",
+        " Pepino "
+      ],
+      "id": 26
+    },
+    {
+      "name": "Juliana",
+      "bread": " 3 Queijos ",
+      "meat": " Picanha ",
+      "optional": [
+        " Cheddar ",
+        " Pepino ",
+        " Cebola roxa ",
+        " Salame ",
+        " Azeitona ",
+        " Tomate ",
+        " Alho ",
+        " Bacon "
+      ],
+      "id": 27
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 <template>
   <div class="q-pa-md flex flex-center">
     <q-form
-      @submit="onSubmit"
+      @submit.prevent="criateBurger"
       @reset="onReset"
       class="column q-gutter-xs"
       style="max-width: 400px"
@@ -9,7 +9,7 @@
       <label id="label">Nome do Cliente:</label>
       <q-input
         outlined
-        v-model="name"
+        v-model="form.name"
         placeholder="Digite seu nome"
         lazy-rules
         :rules="[
@@ -19,7 +19,7 @@
       <label id="label">Escolha o pão:</label>
       <q-select
         outlined
-        v-model="bread"
+        v-model="form.bread"
         :options="breadOptions"
         emit-value
         map-options
@@ -32,7 +32,7 @@
       <label id="label">Escolha a carne do seu burger:</label>
       <q-select
         outlined
-        v-model="meat"
+        v-model="form.meat"
         :options="meatOptions"
         emit-value
         map-options
@@ -43,47 +43,76 @@
         :rules="[val => val && val.length > 0 || 'Escolha uma opção!']"
       />
       <label id="title-optional">Escolha os opcionais:</label>
-      <div class="row flex justify-between q-pa-md">
+      <div class="row flex justify-between">
         <span v-for="(option, index) in optionalGroup" :key="index">
           <q-checkbox
-            v-model="optional"
+            v-model="form.optional"
             :label="option.tipo"
             :val="option.tipo"
           />
         </span>
       </div>
       <div class="q-mb-md q-mt-md flex flex-center">
-        <q-btn label="Criar meu burger"/>
+        <q-btn 
+          type="submit"
+          label="Criar meu burger"/>
       </div>
     </q-form>
   </div>
 </template>
 
 <script>
+import {api} from '../boot/axios'
+
 export default {
   name: "BurgerForm",
   data() {
     return {
-      name: "",
-      bread: "",
+      form: {
+        name: "",
+        bread: "",
+        meat: "",        
+        optional: [],       
+      },
       breadOptions: [],
-      meat: "",
       meatOptions: [],
-      optional: [],
-      optionalGroup: [{}],
+      optionalGroup: [],
     };
   },
   methods: {
     async getIngredientes() {
-      const req = await fetch("http://localhost:3000/ingredientes");
-      const data = await req.json();
+      // url: http://localhost:3000/ingredientes
 
-      console.log(data);
+      try {
+        const response = await api.get('ingredientes');
+        
+        const data = response.data
 
-      this.breadOptions = data.paes;
-      this.meatOptions = data.carnes;
-      this.optionalGroup = data.opcionais;
+        this.breadOptions = data.paes;
+        this.meatOptions = data.carnes;
+        this.optionalGroup = data.opcionais;
+        
+      } catch (error) {
+        console.log(error)
+      }
     },
+    async criateBurger(){
+      try {
+        await api.post('hamburgueres', this.form);
+        this.$q.notify({
+          type: 'positive',
+          message: 'Hamburguer criado com sucesso!',
+          color: 'green-10',
+          timeout: 1000,
+          textColor: 'white',
+          position: 'center',
+          icon: 'done_all'
+        })
+
+      } catch (error) {
+        console.log(error)
+      }
+    }
   },
   mounted() {
     this.getIngredientes();

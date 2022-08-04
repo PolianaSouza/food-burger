@@ -1,11 +1,16 @@
 <template>
     <q-page>
-        <h1>Seus Pedidos</h1>
+        <table-pedidos />
     </q-page>
 </template>
 
 <script>
+import TablePedidos from '../components/TablePedidos.vue'
+
 export default {
     name: 'Pedidos',
+    components: {
+        TablePedidos,
+    }
 }
 </script>
